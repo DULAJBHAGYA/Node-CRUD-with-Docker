@@ -47,7 +47,7 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: user123
-      POSTGRES_PASSWORD: Dulaj98
+      POSTGRES_PASSWORD: <password>
       POSTGRES_DB: db123
   app:
     image: my-node-app
@@ -57,7 +57,7 @@ services:
       DB_HOST: db
       DB_PORT: 5432
       DB_USER: user123
-      DB_PASSWORD: Dulaj98
+      DB_PASSWORD: <password>
       DB_NAME: db123
     depends_on:
       - db
