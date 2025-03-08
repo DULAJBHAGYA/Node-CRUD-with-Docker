@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: Dulaj98
+      POSTGRES_USER: user123
+      POSTGRES_DB: db123
+    ports:
+      - "5432:5432"  # Optional: Expose PostgreSQL to host
+
+  app:
+    image: my-node-app
+    ports:
+      - "13000:3000"
+    # depends_on:
+    #   - db  # Ensures db starts before app
